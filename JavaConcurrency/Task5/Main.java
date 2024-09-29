@@ -2,14 +2,13 @@ package Task5;
 
 class Printer implements Runnable {
     public void run() {
-        for (int i = 0; i < 100; i++) {
-            System.out.println("I'm a printer " + i);
-            try {
+        try {
+            for (int i = 0; i < 100; i++) {
+                System.out.println("I'm a printer " + i);
                 Thread.sleep(300);
-            } catch (InterruptedException e) {
-                System.out.println("INTERRUPTED");
-                return;
             }
+        } catch (InterruptedException e) {
+            System.out.println("INTERRUPTED");
         }
     }
 }
